@@ -15,6 +15,18 @@ void XuatMang (int a[],int n)
         printf("%d\t",a[i]);
     }
 }
+int max (int a[],int n)
+{
+    int max = a[0];
+    for (int i=1; i<n; i++)
+    {
+        if (max < a[i])
+        {
+            max = a[i];
+        }
+    }
+    return max;
+}
 int main()
 {
     int n;
@@ -29,6 +41,8 @@ int main()
         }
     } while (n<0 || n>MAX);
     NhapMang(a,n);
-    XuatMang(a,n);
+    //XuatMang(a,n);
+    int p = max(a,n);
+    printf ("\nMax = %d",p);
     return 0;
 }
