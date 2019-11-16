@@ -55,11 +55,7 @@ int main()
 	}
 	else
 	{
-	printf("\nKhong thoa DK");
+	    printf("\nKhong thoa DK");
 	}
-	
-	
-
-	getch();
 	return 0;
 }
