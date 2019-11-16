@@ -8,6 +8,4 @@ _C is an imperative procedural language. It was designed to be compiled using a 
 
 ```
 
-# img
-
 <img src="img/Code_C.png">
