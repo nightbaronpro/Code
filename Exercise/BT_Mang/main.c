@@ -27,6 +27,20 @@ int max (int a[],int n)
     }
     return max;
 }
+//Ham tim BCNN cua mang
+int TimBCNN (int a[],int n)
+{
+    int boiso = max (a,n);
+    for (int i=0; i<n; i++)
+    {
+        if (boiso % a[i] != 0)
+        {
+            boiso += max(a,n);
+            i = -1; //reset lai gia tri i.
+        }
+    }
+    return boiso;
+}
 int main()
 {
     int n;
@@ -44,5 +58,9 @@ int main()
     //XuatMang(a,n);
     int p = max(a,n);
     printf ("\nMax = %d",p);
+
+    //Tim BCNN
+    int boichung = TimBCNN(a,n);
+    printf ("\nBoi chung nho nhat cua mang la: %d",boichung);
     return 0;
 }
