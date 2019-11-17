@@ -1,4 +1,4 @@
-# Code-Cpp
+# C/C++ Code
 
 ```
 C (Programming language):
