@@ -75,7 +75,7 @@ int main()
 
     //Nhung so con lai trong mang.
     int c[MAX], nc;
-    printf("\n Nhung so con lai trong mang a: ");
+    printf("\nMang c con lai: ");
     Tachmang(a,n);
     return 0;
 }

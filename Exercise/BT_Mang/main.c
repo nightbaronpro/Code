@@ -27,15 +27,27 @@ int max (int a[],int n)
     }
     return max;
 }
+int min (int a[],int n)
+{
+    int min = a[0];
+    for (int i=0; i<n; i++)
+    {
+        if (min > a[i])
+        {
+            min = a[i];
+        }
+    }
+    return min;
+}
 //Ham tim BCNN cua mang
 int TimBCNN (int a[],int n)
 {
-    int boiso = max (a,n);
+    int boiso = min (a,n);
     for (int i=0; i<n; i++)
     {
         if (boiso % a[i] != 0)
         {
-            boiso += max(a,n);
+            boiso += min(a,n);
             i = -1; //reset lai gia tri i.
         }
     }
