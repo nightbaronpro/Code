@@ -34,7 +34,7 @@ int checkPrimeNumber(int n)
 }
 void TachMang (int a[],int n)
 {
-    int b[MAX], nb = 0, c[MAX],nc = 0;
+    int b[MAX], nb = 0;
     for (int i=0; i<n; i++)
     {
         if (checkPrimeNumber(a[i]) == 1)
@@ -45,12 +45,16 @@ void TachMang (int a[],int n)
     }
     XuatMang(b,nb);
 }
-void Tachmang (int a[], int n)
+void Mangconlai (int a[],int n)
 {
     int c[MAX], nc = 0;
     for (int i=0; i<n; i++)
     {
-        c[nc++] = a[i];
+        if (checkPrimeNumber(a[i]) == 0)
+        {
+            c[nc] = a[i];
+            nc++;
+        }
     }
     XuatMang(c,nc);
 }
@@ -73,9 +77,7 @@ int main()
     printf ("\nMang b co chua so nguyen to cua mang a: \n");
     TachMang(a,n);
 
-    //Nhung so con lai trong mang.
-    int c[MAX], nc;
-    printf("\nMang c con lai: ");
-    Tachmang(a,n);
+    printf ("\nMang c con lai: ");
+    Mangconlai(a,n);
     return 0;
 }
