@@ -1,16 +1,16 @@
 #include <stdio.h>
-#define MAX 100
-void NhapMang (int a[],int n)
+#define LENGHT 100
+void nhapMang (int a[],int n)
 {
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; ++i)
         {
             printf("a[%d] = ",i);
             scanf("%d",&a[i]);
         }
 }
-void XuatMang (int a[],int n)
+void xuatMang (int a[],int n)
 {
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; ++i)
     {
         printf("%d\t",a[i]);
     }
@@ -18,7 +18,7 @@ void XuatMang (int a[],int n)
 int max (int a[],int n)
 {
     int max = a[0];
-    for (int i=1; i<n; i++)
+    for (int i=1; i<n; ++i)
     {
         if (max < a[i])
         {
@@ -27,10 +27,24 @@ int max (int a[],int n)
     }
     return max;
 }
+
+// code bay choi
+int checkValue(int a[],int n, int max, int min){
+    int max , min;
+    int value = a[0];
+    for(int i = 1; i < n ; ++i){
+        a[i] > value ? max = a[i] : min = a[i] ;
+        while(true){
+            min > max ? max = min ? value = min;
+            break;
+        }
+    }
+}
+
 int min (int a[],int n)
 {
     int min = a[0];
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; ++i)
     {
         if (min > a[i])
         {
@@ -40,7 +54,7 @@ int min (int a[],int n)
     return min;
 }
 //Ham tim BCNN cua mang
-int TimBCNN (int a[],int n)
+int timBCNN (int a[],int n)
 {
     int boiso = min (a,n);
     for (int i=0; i<n; i++)
@@ -55,24 +69,33 @@ int TimBCNN (int a[],int n)
 }
 int main()
 {
-    int n;
-    int a[MAX];
+    int size;
+    int array[LENGHT];
     do
     {
         printf("Nhap so phan tu: ");
-        scanf("%d",&n);
-        if(n<0 || n>MAX)
+        scanf("%d",&size);
+        if(size<0 || size>LENGHT)
         {
             printf("Nhap sai!");
         }
-    } while (n<0 || n>MAX);
-    NhapMang(a,n);
+    } while (size<0 || size>LENGHT);
+    
+    nhapMang(array,size);
     //XuatMang(a,n);
-    int p = max(a,n);
-    printf ("\nMax = %d",p);
+    
+    /*-----------
+    int _max, _min;
+    checkValur(array, n, _max, _min);
+    printf("max / min is: %d / %d",_max,_min);
+    -----------*/
+    
+    
+    int max = max(array,size,);
+    printf ("\nMax = %d",max);
 
     //Tim BCNN
-    int boichung = TimBCNN(a,n);
+    int boichung = timBCNN(array,size);
     printf ("\nBoi chung nho nhat cua mang la: %d",boichung);
     return 0;
 }
