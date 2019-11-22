@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 #define MAX 100
 
 void nhap (int a[], int n)
@@ -27,7 +26,7 @@ void saptang(int a[], int n)
 		{
 			if(a[i] > a[j])
 			{
-				float temp = a[i];
+			    int temp = a[i];
 				a[i] = a[j];
 				a[j] = temp;
 			}

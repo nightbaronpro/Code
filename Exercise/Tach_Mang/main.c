@@ -21,8 +21,8 @@ void XuatMang (int a[],int n)
 // Bai toan tach phan tu la so nguyen to trong mang a vao mang b va mang c la cac so con lai.
 int checkPrimeNumber(int n)
 {
-    int i, flag = 1;
-    for(i=2; i <= n/2; ++i)
+    int flag = 1;
+    for(int i=2; i <= n/2; ++i)
     {
         if (n%i == 0)
         {
