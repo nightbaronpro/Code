@@ -14,3 +14,7 @@ _C is an imperative procedural language. It was designed to be compiled using a 
 
 <img src="img/download.png">
 
+# Data Type:
+
+<img src="https://github.com/nightbaronpro/Code/blob/master/img/Capture.png?raw=true">
+
