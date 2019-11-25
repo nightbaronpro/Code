@@ -146,5 +146,7 @@ int main()
     }while (n<0 || n>MAX);
     NhapMang(a,n);
     XuatMang(a,n);
+
+    // Ai muon lam gi thi goi ham ra.
     return 0;
 }
