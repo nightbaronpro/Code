@@ -19,11 +19,11 @@ int main()
     }
     if (dem == 0)
     {
-        printf ("%d la so nguyen to",n);
+        printf ("%d la so nguyen to\n",n);
     }
     else 
     {
-        printf ("%d khong la so nguyen to",n);
+        printf ("%d khong la so nguyen to\n",n);
     }
     return 0;
 }
