@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #define LENGHT 100
 void nhapMang (int a[],int n)
 {
@@ -32,7 +33,8 @@ int max (int a[],int n)
 int checkValue(int a[],int n, int max, int min){
     int max , min;
     int value = a[0];
-    for(int i = 1; i < n ; ++i){
+    for(int i = 1; i < n ; ++i)
+    {
         a[i] > value ? max = a[i] : min = a[i] ;
         while(true){
             min > max ? max = min ? value = min;
@@ -91,7 +93,7 @@ int main()
     -----------*/
     
     
-    int max = max(array,size,);
+    int max = max(a,n);
     printf ("\nMax = %d",max);
 
     //Tim BCNN
