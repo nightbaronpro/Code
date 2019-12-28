@@ -42,12 +42,12 @@ int min (int a[], int n)
 }
 int BCNN (int a[], int n)
 {
-    int boiso = min(a,n);
+    int boiso = max(a,n);
     for (int i=0; i<n; i++)
     {
         if (boiso % a[i] != 0)
         {
-            boiso += min(a,n);
+            boiso += max(a,n);
             i = -1; //reset lai gia tri i ban dau.
         }
     }
@@ -72,7 +72,7 @@ int main()
     int SLN = max(a,n);
     printf ("so lon nhat trong mang: %d",SLN);
     int boichung = BCNN(a,n);
-    printf("\n boi chung nho nhat cua mang la: %d\n",boichung);
+    printf("\n boi chung nho nhat cua mang la: %d\n", boichung);
 
     return 0;
 }
