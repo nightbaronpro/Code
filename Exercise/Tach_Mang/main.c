@@ -26,7 +26,7 @@ int checkPrimeNumber(int n)
     {
         if (n%i == 0)
         {
-            flag =0;
+            flag = 0;
             break;
         }
     }
@@ -77,7 +77,7 @@ int main()
     printf ("\nMang b co chua so nguyen to cua mang a: \n");
     TachMang(a,n);
 
-    printf ("\nMang c con lai: ");
+    printf ("Mang c con lai: \n");
     Mangconlai(a,n);
     return 0;
 }
