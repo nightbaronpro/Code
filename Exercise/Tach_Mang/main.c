@@ -77,7 +77,7 @@ int main()
     printf ("\nMang b co chua so nguyen to cua mang a: \n");
     TachMang(a,n);
 
-    printf ("Mang c con lai: \n");
+    printf ("Mang c con lai: ");
     Mangconlai(a,n);
     return 0;
 }
