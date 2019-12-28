@@ -40,6 +40,7 @@ int min (int a[], int n)
     }
     return min;
 }
+// Boi chung nho nhat (Least Common Multiple)
 int BCNN (int a[], int n)
 {
     int boiso = max(a,n);
