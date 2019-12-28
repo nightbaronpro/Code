@@ -28,7 +28,18 @@ int max (int a[], int n)
     }
     return max;
 }
-
+int number (int a[], int n)
+{
+    int number = a[0];
+    for (int i=0; i<n; i++)
+    {
+        if (number < a[i] && number % 2 == 0)
+        {
+            number = a[i];
+        }
+    }
+    return number;
+}
 int main()
 {
     int n;
@@ -46,5 +57,7 @@ int main()
     XuatMang(a,n);
 
     printf ("\nSo lon nhat trong mang: %d\n",max(a,n));
+    int cau3 = number(a,n);
+    printf ("so o vi tri chan lon nhat: %d\n",cau3);
     return 0;
 }
