@@ -28,6 +28,7 @@ int max (int a[], int n)
     }
     return max;
 }
+// Ham liet ke nhung vi tri chan co gia tri lon nhat.
 int number (int a[], int n)
 {
     int number = a[0];
