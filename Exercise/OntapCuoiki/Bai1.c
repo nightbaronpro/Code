@@ -60,20 +60,20 @@ int main()
     int n;
     do
     {
-        printf ("\nnhap n: ");
+        printf ("\nInput n: ");
         scanf("%d",&n);
         if (n<0 || n>MAX)
         {
-            printf("nhap sai, moi nhap lai1");
+            printf("You're wrong bitch!");
         }
     } while (n<0 || n>MAX);
 
     NhapMang(a,n);
     XuatMang(a,n);
     int SLN = max(a,n);
-    printf ("so lon nhat trong mang: %d",SLN);
+    printf ("\nThe largest number of this array is: %d",SLN);
     int boichung = BCNN(a,n);
-    printf("\n boi chung nho nhat cua mang la: %d\n", boichung);
+    printf("\n The least common multiple of this array is: %d\n", boichung);
 
     return 0;
 }
