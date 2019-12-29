@@ -85,7 +85,7 @@ int main ()
     XuatMang(a,n);
     
     int SNT = LargestPrime(a,n);
-    printf ("so nguyen to lon nhat: %d\n",SNT);   
+    printf ("The largest prime number is: %d\n",SNT);   
     
     return 0;
 }
